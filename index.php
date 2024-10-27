@@ -1,9 +1,7 @@
 <?php
     require_once 'config/config.php';
-    //CAPTURAR LA URL ACTUAL
-    $currentPageUrl = $_SERVER['REQUEST_URI'];
     //VERIFICAR SI EXISTE LA RUTA ADMIN
-    $isAdmin = strpos($currentPageUrl, '/' . ADMIN) !== false;
+    $isAdmin = strpos($_SERVER['REQUEST_URI'], '/' . ADMIN) !== false;
     //COMPROBAR SI EXISTE GET PARA CREAR URLS AMIGABLES
     $ruta = empty($_GET['url']) ? 'principal/index' : $_GET['url'];
     //CREAR UN ARRAY A PARTIR DE UNA RUTA
@@ -13,7 +11,7 @@
         (count($array)==2 && empty($array[1]))) 
         && $array[0]== ADMIN) {
         //CREAR CONTROLADOR
-        $controller = 'admin';
+        $controller = 'Admin';
         $metodo = 'login';
     } else {
         $indiceUrl = ($isAdmin) ? 1 : 0 ;
@@ -35,6 +33,8 @@
         }
         $parametro = trim($parametro, ',');
    }
+   //LLAMAR AUTOLOAD
+   require_once 'config/app/Autoload.php';
    //VALIDAR DIRECTORIO DE CONTROLADORES
    $dirControllers = ($isAdmin) ? 'controllers/admin/' . $controller . '.php' : 'controllers/principal/' . $controller . '.php';
    if (file_exists($dirControllers)) {
