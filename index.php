@@ -1,5 +1,6 @@
 <?php
     require_once 'config/config.php';
+    require_once 'helpers/funciones.php';
     //VERIFICAR SI EXISTE LA RUTA ADMIN
     $isAdmin = strpos($_SERVER['REQUEST_URI'], '/' . ADMIN) !== false;
     //COMPROBAR SI EXISTE GET PARA CREAR URLS AMIGABLES

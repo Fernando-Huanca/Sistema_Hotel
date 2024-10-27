@@ -5,10 +5,7 @@ public function __construct() {
 }
 
    public function index(){
-      $data = $this->model->getPrueba();
-      echo $data;
-   } 
-
-   
+      $this->views->getView('principal', 'index');
+   }   
 }
 ?>
