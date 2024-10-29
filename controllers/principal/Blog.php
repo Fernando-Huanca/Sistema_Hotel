@@ -5,7 +5,8 @@ public function __construct() {
 }
 
    public function index(){
-      $data['title'] = 'Habitaciones';
+      $data['title'] = 'Blog';
+      $data['subtitle'] = 'Entradas';
       $this->views->getView('principal/blog/index', $data);
    }   
 }
