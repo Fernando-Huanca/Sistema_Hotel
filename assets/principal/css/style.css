@@ -1382,9 +1382,6 @@ Eorik SliderArea Style
           animation: 2s .2s fadeInUp both;
 }
 
-.slider-item-bg-1 {
-  background-image: url(../img/home-one/slider/slider-img-1.jpg);
-}
 
 .slider-item-bg-2 {
   background-image: url(../img/home-one/slider/slider-img-2.jpg);
