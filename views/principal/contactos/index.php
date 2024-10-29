@@ -110,3 +110,6 @@ include_once 'views/template/portada.php'; ?>
 		</div>
 		<!-- End Map Area -->
 <?php include_once 'views/template/footer-principal.php' ?>
+</body>
+
+</html>

@@ -247,4 +247,9 @@ include_once 'views/template/portada.php'; ?>
         </div>
     </div>
 </section>
+
 <?php include_once 'views/template/footer-principal.php' ?>
+
+</body>
+
+</html>
