@@ -25,10 +25,10 @@
     if (!empty($array[$metodoIndice]) && $array[$metodoIndice] != '' ) {
         $metodo = $array[$metodoIndice];
     }
-   //VALIDAR METODOS
+   //VALIDAR PARAMETROS
    $parametro = '';
    $parametroIndice = ($isAdmin) ? 3 : 2;
-   if (!empty($array[$metodoIndice]) && $array[$metodoIndice] != '' ) {
+   if (!empty($array[$parametroIndice]) && $array[$parametroIndice] != '' ) {
         for ($i=$parametroIndice; $i < count($array) ; $i++) { 
             $parametro .= $array[$i] . ',';
         }

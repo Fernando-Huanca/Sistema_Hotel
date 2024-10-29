@@ -5,7 +5,8 @@ public function __construct() {
 }
 
    public function index(){
-      $this->views->getView('principal', 'index');
+      $data['title'] = 'Página principal';
+      $this->views->getView('index', $data);
    }   
 }
 ?>
