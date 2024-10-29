@@ -28,8 +28,8 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-6">
 							<div class="single-widget">
-								<a href="index.html">
-									<img src="<?php echo RUTA_PRINCIPAL . 'assets/principal';  ?>/img/home-one/footer-logo.png" alt="Image">
+								<a href="<?php echo RUTA_PRINCIPAL;  ?>">
+									<img src="<?php echo RUTA_PRINCIPAL . 'assets';  ?>/img/logo.png" width="80" alt="Image">
 								</a>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestiae corporis, magni maxime perferendis ducimus.</p>
 								<ul class="social-icon">
@@ -179,7 +179,7 @@
 					<div class="row align-items-center">
 						<div class="col-lg-6">
 							<div class="copy-right">
-								<p>Copyright @2022 <a href="index.html">Ecorik</a>. All Rights Reserved</p>
+								<p>Copyright @2022 <a href="<?php echo RUTA_PRINCIPAL;  ?>">Ecorik</a>. All Rights Reserved</p>
 							</div>
 						</div>
 						<div class="col-lg-6">

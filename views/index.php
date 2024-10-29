@@ -1,4 +1,4 @@
-<?php echo include_once 'views/template/header-principal.php' ?>
+<?php include_once 'views/template/header-principal.php' ?>
 
 <!-- Start Ecorik Slider Area -->
 <section class="eorik-slider-area">
