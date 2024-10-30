@@ -4,24 +4,24 @@
 <section class="eorik-slider-area">
     <div class="eorik-slider owl-carousel owl-theme">
         <?php foreach ($data['sliders'] as $slider) { ?>
-        <div class="eorik-slider-item" style=" background-image: url(<?php echo RUTA_PRINCIPAL . 'assets/img/sliders/' . $slider['foto'] ?>);">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="eorik-slider-text overflow-hidden one eorik-slider-text-one">
-                            <h1><?php echo $slider['titulo'] ?></h1>
-                            <span><?php echo $slider['subtitulo'] ?></span>
-                            <div class="slider-btn">
-                                <a class="default-btn" href="<?php echo $slider['url'] ?>">
-                                    Más Informacion
-                                    <i class="flaticon-right"></i>
-                                </a>
+            <div class="eorik-slider-item" style=" background-image: url(<?php echo RUTA_PRINCIPAL . 'assets/img/sliders/' . $slider['foto'] ?>);">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="eorik-slider-text overflow-hidden one eorik-slider-text-one">
+                                <h1><?php echo $slider['titulo'] ?></h1>
+                                <span><?php echo $slider['subtitulo'] ?></span>
+                                <div class="slider-btn">
+                                    <a class="default-btn" href="<?php echo $slider['url'] ?>">
+                                        Más Informacion
+                                        <i class="flaticon-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <?php } ?>
     </div>
     <div class="white-shape">
@@ -37,7 +37,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-sm-6">
                     <div class="check-content">
-                        <p>Arrival Date</p>
+                        <p>Fecha Llegada</p>
                         <div class="form-group">
                             <div class="input-group date" id="datetimepicker-1">
                                 <i class="flaticon-calendar"></i>
@@ -52,7 +52,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="check-content">
-                        <p>Departure Date</p>
+                        <p>Fecha Salida</p>
                         <div class="form-group">
                             <div class="input-group date" id="datetimepicker-2">
                                 <i class="flaticon-calendar"></i>
@@ -65,41 +65,27 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="check-content">
-                                <p>Adults</p>
-                                <div class="form-group">
-                                    <select name="adult" class="form-content">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                        <option value="5">05</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="check-content">
-                                <p>Children</p>
-                                <div class="form-group">
-                                    <select name="adult" class="form-content">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                        <option value="5">05</option>
-                                    </select>
-                                </div>
-                            </div>
+                    <div class="check-content">
+                        <div class="form-group">
+                            <label for="habitacion" class="form-label">Habitaciones</label>
+                            <select
+                                name="habitacion"
+                                class="select-auto"
+                                id="habitacion" style="width: 100%;">
+                                <option value="">Seleccionar</option>
+                                <?php foreach ($data['habitaciones'] as $habitacion) { ?>
+                                    <option value="<?php echo $habitacion['id'] ?>"><?php echo $habitacion['estilo'] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
+
+
                 </div>
                 <div class="col-lg-3">
                     <div class="check-btn check-content mb-0">
                         <button class="default-btn">
-                            Check Availability
+                            Comprobar
                             <i class="flaticon-right"></i>
                         </button>
                     </div>
@@ -851,6 +837,8 @@
 </section>
 <!-- End News Area -->
 <?php echo include_once 'views/template/footer-principal.php' ?>
+
+<script src="<?php echo RUTA_PRINCIPAL . 'assets/principal/js/pages/index.js' ?>"></script>
 
 </body>
 
