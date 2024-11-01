@@ -33,7 +33,7 @@
 <!-- Start Check Area -->
 <div class="check-area mb-minus-70">
     <div class="container">
-        <form class="check-form" id="formulario" action="<?php echo RUTA_PRINCIPAL . 'principal/verify'; ?>">
+        <form class="check-form" id="formulario" action="<?php echo RUTA_PRINCIPAL . 'reserva/verify'; ?>">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-sm-6">
                     <div class="check-content">
@@ -838,7 +838,7 @@
 <!-- End News Area -->
 <?php echo include_once 'views/template/footer-principal.php';
 
-if (empty($_GET['respuesta']) && $_GET['respuesta']=='warning') { ?>
+if (!empty($_GET['respuesta']) && $_GET['respuesta']=='warning') { ?>
 
 <script>
     alertaSW('TODO LOS CAMPOS SON REQUERIDOS', 'warning');
