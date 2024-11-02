@@ -16,5 +16,14 @@
             WHERE id_habitacion = $habitacion");
         }
 
+        //RECUPERAR LAS HABITACIONES
+        public function getHabitaciones(){
+            return $this->selectAll("SELECT * FROM habitaciones WHERE estado = 1");
+        } 
+        //RECUPERAR LAS HABITACION
+        public function getHabitacion($id_habitacion){
+            return $this->select("SELECT * FROM habitaciones WHERE id = $id_habitacion");
+        } 
+
     }
 ?>
