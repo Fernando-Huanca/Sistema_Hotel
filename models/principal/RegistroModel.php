@@ -10,5 +10,14 @@
             return $this->insert($sql, [$nombre, $apellido, $usuario, $correo, $hash, $rol]);
         }
 
+        public function validarUnique($item, $valor, $id_usuario){
+            if ($id_usuario == 0) {
+                $sql = "SELECT * FROM usuarios WHERE $item = '$valor'";
+            } else{
+                $sql = "SELECT * FROM usuarios WHERE $item = '$valor' AND id != $id_usuario";
+            }
+            return $this->select($sql);
+        }
+
     }
 ?>
