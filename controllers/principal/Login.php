@@ -4,6 +4,7 @@ class Login extends Controller
    public function __construct()
    {
       parent::__construct();
+      session_start();
    }
 
    public function index()
@@ -26,6 +27,13 @@ class Login extends Controller
             } else {
                if (password_verify($clave, $verificar['clave'])) {
                   //CREAR SESIONES
+                  crearSession([
+                     'id_usuario' => $verificar['id'], 
+                     'usuario' => $verificar['usuario'],
+                     'correo' => $verificar['correo'],
+                     'nombre' => $verificar['nombre'] . ' ' . $verificar['apellido'],
+                     'rol' => $verificar['rol']
+                  ]);
                   $res = ['tipo' => 'success', 'msg' => 'BIENVENIDO'];
                } else {
                   $res = ['tipo' => 'warning', 'msg' => 'CONTRASEÑA INCORRECTA'];

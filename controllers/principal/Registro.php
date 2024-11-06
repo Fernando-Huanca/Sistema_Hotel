@@ -4,6 +4,7 @@ class Registro extends Controller
    public function __construct()
    {
       parent::__construct();
+      session_start();
    }
 
    public function index()
@@ -34,6 +35,13 @@ class Registro extends Controller
                   if (empty($verificarCorreo)) {
                      $data = $this->model->registrarse($nombre, $apellido, $usuario, $correo, $hash, $rol);
                      if ($data > 0) {
+                        crearSession([
+                           'id_usuario' => $data,
+                           'usuario' => $usuario,
+                           'correo' => $correo,
+                           'nombre' => $nombre . ' ' . $apellido,
+                           'rol' => $rol
+                        ]);
                         $res = ['tipo' => 'success', 'msg' => 'USUARIO REGISTRADO'];
                      } else {
                         $res = ['tipo' => 'warning', 'msg' => 'ERROR AL REGISTRARSE'];
