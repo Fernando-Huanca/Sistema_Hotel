@@ -1,4 +1,5 @@
 <?php
+require_once 'vendor/autoload.php';
 class Reserva extends Controller
 {
    public function __construct()
@@ -25,6 +26,8 @@ class Reserva extends Controller
                'habitacion' => $habitacion
             ];
             if (empty($reserva)) {
+               //CREAR SESION DE LA HABITACIÓN
+               $_SESSION['reserva'] = $data['disponible'];
                $data['mensaje'] = 'DISPONIBLE';
                $data['tipo'] = 'success';
             } else {
@@ -70,6 +73,10 @@ class Reserva extends Controller
 
    public function pendiente(){
       $data['title'] = 'Reserva pendiente';
+      $data['habitacion'] = [];
+      if(!empty($_SESSION['reserva'])){
+         $data['habitacion'] = $this->model->getHabitacion($_SESSION['reserva']['habitacion']);
+      }
       $this->views->getView('principal/clientes/reservas/pendiente', $data);
    }
 }
