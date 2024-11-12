@@ -9,5 +9,6 @@ define('DATABASE','reservas');
 define('CHARSET','charset=utf8');
 define('TITLE', 'HOTEL PATO');
 //CREDENCIALES
+define('MONEDA_PAYPAL', 'USD');
 define('CLIENTE_ID', 'ASqbgKwpP-YzP71eCORalzIwTjn9ehMXbfosRJGA7niqD8YHNs-Sm1mZW6dFk80L7QgcIRAQyUHT3anA')
 ?>

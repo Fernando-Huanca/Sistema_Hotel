@@ -72,12 +72,37 @@ class Reserva extends Controller
    }
 
    public function pendiente(){
+      
       $data['title'] = 'Reserva pendiente';
       $data['habitacion'] = [];
       if(!empty($_SESSION['reserva'])){
          $data['habitacion'] = $this->model->getHabitacion($_SESSION['reserva']['habitacion']);
       }
+      
+     /* $fecha1 = new DateTime($_SESSION['reserva']['f_llegada']);
+      $fecha2 = new DateTime($_SESSION['reserva']['f_salida']);
+
+      $cantidad = $fecha2->diff($fecha1);
+      $precio = floatval($data['habitacion']['precio']);
+      $preference = $client -> create([
+         "items" => [
+            [
+               "title" => $data['habitacion']['estilo'],
+               "quantity" => $cantidad ->d,
+               "unit_price" => $data['habitacion']['precio']
+            ]
+         ],
+         'back_urls' => $back_urls
+      ]);
+      $data['preference_id'] = $preference->id;
+      $data['total'] = $cantidad->d * $precio;*/
       $this->views->getView('principal/clientes/reservas/pendiente', $data);
+   }
+
+   public function registrarReserva(){
+      $datos = file_get_contents('php://input');
+      $array = json_decode($datos, true);
+      print_r($array);
    }
 }
 ?>
