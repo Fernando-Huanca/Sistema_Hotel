@@ -748,7 +748,7 @@
                             </li>
                         </ul>
                         <a href="news-details.html">
-                            <h3>Celebrating Decade Years Of Hotel In 2020</h3>
+                            <h3>Celebrating Decade Years Of Hotel In 20200</h3>
                         </a>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga veritatis veniam corrupti perferendis.</p>
                         <a class="read-more" href="news-details.html">

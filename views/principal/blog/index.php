@@ -1,7 +1,5 @@
 <?php include_once 'views/template/header-principal.php';
-
 include_once 'views/template/portada.php'; ?>
-
 
 <section class="news-area ptb-100">
     <div class="container">
@@ -14,7 +12,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/1.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/1.jpg" alt="Image">
                         </a>
                         <div class="dates">
                             <span>HOTEL</span>
@@ -50,7 +48,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/2.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/2.jpg" alt="Image">
                         </a>
                         <div class="dates">
                             <span>PRICE</span>
@@ -86,7 +84,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/1.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/1.jpg" alt="Image">
                         </a>
                         <div class="dates">
                             <span>STORE</span>
@@ -122,7 +120,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/11.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/11.jpg" alt="Image">
                         </a>
                     </div>
                     <div class="news-content-wrap">
@@ -155,7 +153,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/12.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/12.jpg" alt="Image">
                         </a>
                     </div>
                     <div class="news-content-wrap">
@@ -188,7 +186,7 @@ include_once 'views/template/portada.php'; ?>
                 <div class="single-news">
                     <div class="news-img">
                         <a href="news-details.html">
-                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/';  ?>img/news/13.jpg" alt="Image">
+                            <img src="<?php echo RUTA_PRINCIPAL . 'assets/principal/'; ?>img/news/13.jpg" alt="Image">
                         </a>
                     </div>
                     <div class="news-content-wrap">
@@ -248,7 +246,7 @@ include_once 'views/template/portada.php'; ?>
     </div>
 </section>
 
-<?php include_once 'views/template/footer-principal.php' ?>
+<?php include_once 'views/template/footer-principal.php'; ?>
 
 </body>
 
